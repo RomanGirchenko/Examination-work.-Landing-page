@@ -1,0 +1,1256 @@
+@font-face {
+    font-family: Releway;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+body {
+    background-color: #1a1a1a;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 830px;
+    padding: 10px 0;
+    background-color: #6ba03580;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.fa {
+    font-size: 30px;
+    color: white;
+}
+
+.fa:hover {
+    cursor: pointer;
+}
+
+/* Стили скрытого меню навигации */
+nav {
+    position: absolute;
+    top: 60px;
+    left: -999px;
+    z-index: 1;
+    background-color: #6aa03580;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 250px;
+    height: 100vh;
+    border-top: 2px solid #6aa035;
+    border-right: 2px solid #6aa035;
+}
+
+nav a {
+    font-family: Montserrat;
+    color: white;
+    text-decoration: none;
+    margin: 10px 20px;
+    border-bottom: 3px solid #6aa035;
+}
+
+nav button {
+    width: 100px;
+    height: 30px;
+    margin: 10px 20px;
+    border-radius: 20px;
+    background-color: #6aa035;
+    border: none;
+}
+
+
+/* Стили окна авторизации */
+.formLogin {
+    width: 100%;
+    height: 720px;
+    position: fixed;
+    z-index: 100;
+    background-color: #ffffff9b;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.formavt {
+    width: 400px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: #f1ad0e99;
+    backdrop-filter: blur(10px);
+}
+
+.formavt h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.formavt input {
+    display: block;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: transparent;
+    margin: 5px auto;
+    border: none;
+    border-bottom: 3px solid #353535;
+    padding-left: 20px;
+}
+
+.formavt button {
+    width: 200px;
+    height: 40px;
+    display: block;
+    margin: 10px auto;
+    background-color: #99e54d;
+    border-radius: 10px;
+    border: none;
+}
+
+
+/* Стили main */
+.intro {
+    height: 720px;
+    background-image: url(../images/header.jpg);
+    background-position: 100% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 130px 0 80px;
+}
+
+.frame {
+    width: 930px;
+    margin: 0 auto;
+    font-family: Montserrat;
+}
+
+.circleblock {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #99e54d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circleblock p:nth-child(1) {
+    font-size: 54px;
+    font-weight: 600;
+}
+
+.circleblock p:nth-child(2) {
+    font-size: 15px;
+    font-weight: 600;
+    width: 85px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+    width: 345px;
+}
+
+.newrest {
+    color: white;
+    margin: 15px 0 20px;
+}
+
+.butintro {
+    width: 150px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #f1ae0e;
+    margin-top: 40px;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    border: none;
+}
+
+.content {
+    width: 930px;
+    margin: 0 auto;
+    font-family: Montserrat;
+}
+
+.food {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.blockfood {
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockfood1 {
+    background-image: url(../images/header.jpg);
+    background-position: -95px 0;
+    background-size: 155%;
+    background-repeat: no-repeat;
+}
+
+.blockfood2 {
+    background-image: url(../images/menudelivepment.jpeg);
+    background-position: -95px 0;
+    background-size: 155%;
+    background-repeat: no-repeat;
+}
+
+.blockfood3 {
+    background-image: url(../images/restaurant.jpg);
+    background-position: -95px 0;
+    background-size: 155%;
+    background-repeat: no-repeat;
+}
+
+.beef {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    margin: 130px 0;
+}
+
+.textbeef {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.textbeef h2 {
+    font-size: 40px;
+}
+
+.textbeef p {
+    width: 455px;
+    font-family: Releway;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.h6 {
+    font-size: 15px;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.imagesback1 {
+    width: 450px;
+    height: 450px;
+    background-image: url(../images/beef.jpg);
+    background-position: -120px 0;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+}
+
+
+/* Баннер */
+.slider {
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 700px;
+    height: 500px;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 700px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #40D3DC;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 700px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background: #40D3DC;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background: #40D3DC;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background: #40D3DC;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background: #40D3DC;
+}
+
+.cruassan {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    margin: 130px 0;
+}
+
+.imagesback2 {
+    width: 450px;
+    height: 450px;
+    background-image: url(../images/cruassan.jpeg);
+    background-position: 0 -75px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+}
+
+.butmenu {
+    width: 400px;
+    height: 60px;
+    border: none;
+    border-radius: 50px;
+    background-color: #99e54d;
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+    display: block;
+    margin: auto;
+}
+
+.butmenu:hover {
+    background-color: #7dd02a;
+}
+
+.bordertop {
+    border-top: 80px solid transparent;
+}
+
+.menu {
+    display: none;
+    /* grid-template-columns: repeat(2, 1fr); */
+    margin-top: 80px;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.elementMenu {
+    width: 450px;
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imgMenu1 {
+    background-image: url(../images/pizza.jpg);
+    background-repeat: no-repeat;
+    background-position: -40px;
+    background-size: 120%;
+    border-radius: 50px;
+    width: 450px;
+    height: 430px;
+}
+
+.elementName {
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.elementBut {
+    width: 135px;
+    height: 50px;
+    background-color: #99e54d;
+    font-family: Raleway;
+    border-radius: 50px;
+    border: none;
+    display: block;
+    margin: 0 auto 40px;
+}
+
+.elementBut:hover {
+    background-color: #7dd02a;
+}
+
+.imgMenu2 {
+    background-image: url(../images/salad.jpg);
+    background-repeat: no-repeat;
+    background-position: -95px;
+    background-size: 145%;
+    border-radius: 50px;
+    width: 450px;
+    height: 430px;
+}
+
+.imgMenu3 {
+    background-image: url(../images/cruassan.jpeg);
+    background-repeat: no-repeat;
+    background-position: 0 -50px;
+    background-size: 100%;
+    border-radius: 50px;
+    width: 450px;
+    height: 430px;
+}
+
+.imgMenu4 {
+    background-image: url(../images/drinks.jpeg);
+    background-repeat: no-repeat;
+    background-position: -70px;
+    background-size: 129%;
+    border-radius: 50px;
+    width: 450px;
+    height: 430px;
+}
+
+
+/* Стили модального окна */
+.fonModalWindow {
+    width: 100%;
+    height: 720px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #ffffff5c;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalwindow {
+    width: 650px;
+    height: 550px;
+    border-radius: 20px;
+    background-color: #99e54ddd;
+    backdrop-filter: blur(10px);
+    position: absolute;
+}
+
+.modalwindow img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modalwindow img:hover {
+    cursor: pointer;
+}
+
+.modalwindow p {
+    margin-top: 60px;
+    text-align: center;
+    padding: 20px;
+}
+
+.salad {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    margin: 130px 0;
+}
+
+.imagesback3 {
+    width: 450px;
+    height: 450px;
+    background-image: url(../images/fresh-salad-with-turkey-eggs-vegetables.jpg);
+    background-position: -167px;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+}
+
+.form {
+    height: 560px;
+    width: 100%;
+    background-image: url(../images/vegetables-set-left-black-slate.jpg);
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 8% 0;
+}
+
+.circleform {
+    font-family: Montserrat;
+}
+
+.form h2 {
+    color: white;
+    font-size: 40px;
+    margin: 60px 0 25px;
+}
+
+.textform {
+    color: white;
+    font-family: Raleway;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.impemail {
+    width: 420px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+}
+
+.inpbut {
+    width: 110px;
+    height: 40px;
+    background-color: #99e54d;
+    font-family: Raleway;
+    border-radius: 50px;
+    border: none;
+    margin-left: 30px;
+}
+
+footer {
+    padding: 100px 0;
+}
+
+.footerframe {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    background-color: #1a1a1a;
+}
+
+.imgfooter {
+    width: 70px;
+    height: 70px;
+    background-color: #99e54d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgfooter img {
+    width: 50px;
+    height: 50px;
+}
+
+.contacts {
+    width: 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacts h3 {
+    color: white;
+    margin-top: 15px;
+    font-family: Montserrat;
+}
+
+.contacts p {
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: Raleway;
+    font-size: 15px;
+}
+
+.contacts a {
+    width: 183px;
+    text-decoration: none;
+    color: #f1ae0e;
+    line-height: 2;
+    text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+    header {
+        gap: 680px;
+    }
+
+    .frame {
+        width: 770px;
+    }
+
+    .content {
+        width: 770px;
+    }
+
+    .blockfood {
+        width: 235px;
+        height: 235px;
+    }
+
+    .beef {
+        width: 770px;
+    }
+
+    .textbeef {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .textbeef p {
+        width: 363px;
+    }
+
+    .imagesback1 {
+        width: 400px;
+        height: 400px;
+    }
+
+    .imagesback2 {
+        width: 400px;
+        height: 400px;
+    }
+
+    .elementMenu {
+        width: 370px;
+        height: 440px;
+    }
+
+    .imgMenu1 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .imgMenu2 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .imgMenu3 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .imgMenu4 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .modalwindow {
+        width: 600px;
+        height: 500px;
+    }
+
+    .imagesback3 {
+        width: 400px;
+        height: 400px;
+        background-position: -155px;
+        background-size: 155%;
+    }
+
+    .footerframe {
+        width: 770px;
+        margin: auto;
+        gap: 50px;
+    }
+
+    .imgfooter {
+        width: 60px;
+        height: 60px;
+    }
+
+    .imgfooter img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contacts p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 792px) {
+    header {
+        gap: 490px;
+    }
+
+    .intro {
+        background-position: 50% 40%;
+        background-size: cover;
+    }
+
+    .frame {
+        width: 575px;
+    }
+
+    .content {
+        width: 575px;
+    }
+
+    .blockfood {
+        width: 235px;
+        height: 235px;
+    }
+
+    .food {
+        flex-wrap: wrap;
+    }
+
+    .blockfood {
+        width: 260px;
+        height: 260px;
+    }
+
+    .beef {
+        width: 575px;
+        align-items: center;
+    }
+
+    .textbeef p {
+        width: 265px;
+    }
+
+    .imagesback1 {
+        width: 290px;
+        height: 290px;
+        background-position: -80px 0;
+        background-size: 150%;
+    }
+
+    .imagesback2 {
+        width: 290px;
+        height: 290px;
+    }
+
+    .slider {
+        width: 500px;
+        height: 350px;
+    }
+
+    .slides {
+        width: 500%;
+        height: 350px;
+    }
+
+    .slide img {
+        width: 500px;
+        height: 350px;
+    }
+
+    .navigation-manual {
+        width: 500px;
+    }
+
+    .navigation-auto {
+        width: 500px;
+        margin-top: 310px;
+    }
+
+    .cruassan {
+        margin-bottom: 80px;
+    }
+
+    .menu {
+        width: 575px;
+        flex-wrap: wrap;
+    }
+
+    .elementMenu {
+        width: 500px;
+        height: 470px;
+        margin: auto;
+    }
+
+    .imgMenu1 {
+        width: 500px;
+        height: 320px;
+    }
+
+    .imgMenu2 {
+        width: 500px;
+        height: 320px;
+    }
+
+    .imgMenu3 {
+        width: 500px;
+        height: 320px;
+        background-position: 0 -170px;
+        background-size: 100%;
+    }
+
+    .imgMenu4 {
+        width: 500px;
+        height: 320px;
+        background-position: 0px;
+        background-size: 100%;
+    }
+
+    .modalwindow {
+        width: 500px;
+        height: 400px;
+    }
+
+    .salad {
+        align-items: center;
+    }
+
+    .imagesback3 {
+        width: 290px;
+        height: 290px;
+        background-position: -155px;
+        background-size: 155%;
+    }
+
+    .footerframe {
+        width: 575px;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 612px) {
+    header {
+        gap: 340px;
+    }
+
+    .intro {
+        background-position: 50% 40%;
+        background-size: cover;
+    }
+
+    .frame {
+        width: 440px;
+    }
+
+    .content {
+        width: 440px;
+    }
+
+    .food {
+        width: 440px;
+    }
+
+    .blockfood {
+        width: 430px;
+        height: 210px;
+    }
+
+    .blockfood1 {
+        background-image: url(../images/header.jpg);
+        background-position: 0px;
+        background-size: 100%;
+    }
+
+    .blockfood2 {
+        background-image: url(../images/menudelivepment.jpeg);
+        background-position: 0px;
+        background-size: 100%;
+    }
+
+    .blockfood3 {
+        background-image: url(../images/restaurant.jpg);
+        background-position: 0px;
+        background-size: 100%;
+    }
+
+    .beef {
+        flex-direction: column;
+        width: 440px;
+    }
+
+    .textbeef {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .textbeef p {
+        width: 410px;
+    }
+
+    .imagesback1 {
+        width: 400px;
+        height: 250px;
+        background-position: 0px 0;
+        background-size: 100%;
+    }
+
+    .slider {
+        width: 430px;
+        height: 300px;
+    }
+
+    .slides {
+        width: 500%;
+        height: 300px;
+    }
+
+    .slide img {
+        width: 430px;
+        height: 300px;
+    }
+
+    .navigation-manual {
+        width: 430px;
+    }
+
+    .navigation-auto {
+        width: 430px;
+        margin-top: 260px;
+    }
+
+    .cruassan {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .imagesback2 {
+        width: 400px;
+        height: 250px;
+        background-position: 0 -130px;
+        background-size: 100%;
+    }
+
+    .menu {
+        width: 440px;
+    }
+
+    .elementMenu {
+        width: 400px;
+        height: 470px;
+        margin: auto;
+    }
+
+    .imgMenu1 {
+        width: 400px;
+        height: 320px;
+    }
+
+    .imgMenu2 {
+        width: 400px;
+        height: 320px;
+    }
+
+    .imgMenu3 {
+        width: 400px;
+        height: 320px;
+    }
+
+    .imgMenu4 {
+        width: 400px;
+        height: 320px;
+        background-position: -25px;
+        background-size: 110%;
+    }
+
+    .modalwindow {
+        width: 400px;
+        height: 400px;
+    }
+
+    .salad {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagesback3 {
+        width: 400px;
+        height: 250px;
+        background-position: 0;
+        background-size: 100%;
+    }
+
+    .form {
+        background-position: 50%;
+    }
+
+    .circleform {
+        margin: auto;
+    }
+
+    .form h2 {
+        width: 340px;
+        text-align: center;
+        margin: 40px auto 25px;
+    }
+
+    .textform {
+        text-align: center;
+    }
+
+    .impemail {
+        margin-bottom: 10px;
+    }
+
+    .inpbut {
+        width: 420px;
+        height: 40px;
+        margin-left: 0;
+    }
+
+    .footerframe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 440px;
+    }
+
+
+}
+
+@media screen and (max-width: 460px) {
+    header {
+        gap: 180px;
+    }
+
+    .formavt {
+        width: 270px;
+        height: 350px;
+    }
+    
+    .formavt input {
+        width: 200px;
+    }
+    
+    .frame {
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        width: 260px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .content {
+        width: 280px;
+    }
+
+    .food {
+        width: 280px;
+    }
+
+    .blockfood {
+        width: 430px;
+        height: 210px;
+    }
+
+    .blockfood1 {
+        background-size: 110%;
+    }
+
+    .blockfood2 {
+        background-size: 110%;
+    }
+
+    .blockfood3 {
+        background-size: 110%;
+    }
+
+    .slider {
+        width: 280px;
+        height: 200px;
+    }
+
+    .slides {
+        width: 500%;
+        height: 200px;
+    }
+
+    .slide img {
+        width: 280px;
+        height: 200px;
+    }
+
+    .navigation-manual {
+        width: 280px;
+    }
+
+    .navigation-auto {
+        width: 280px;
+        margin-top: 160px;
+    }
+
+    .beef {
+        flex-direction: column;
+        width: 280px;
+    }
+
+    .textbeef p {
+        width: 250px;
+    }
+
+    .imagesback1 {
+        width: 280px;
+        height: 150px;
+    }
+
+    .imagesback2 {
+        width: 280px;
+        height: 150px;
+    }
+
+    .butmenu {
+        width: 270px;
+        font-size: 26px;
+    }
+
+    .menu {
+        width: 280px;
+    }
+
+    .elementMenu {
+        width: 280px;
+        height: 350px;
+        margin: auto;
+    }
+
+    .imgMenu1 {
+        width: 280px;
+        height: 200px;
+        background-position: 0;
+        background-size: 110%;
+    }
+
+    .imgMenu2 {
+        width: 280px;
+        height: 200px;
+        background-position: -25px;
+        background-size: 110%;
+    }
+
+    .imgMenu3 {
+        width: 280px;
+        height: 200px;
+        background-position: -25px;
+        background-size: 110%;
+    }
+
+    .imgMenu4 {
+        width: 280px;
+        height: 200px;
+        background-position: -10px;
+        background-size: 110%;
+    }
+
+    .modalwindow {
+        width: 280px;
+        height: 450px;
+    }
+
+    .imagesback3 {
+        width: 280px;
+        height: 150px;
+    }
+
+    .form h2 {
+        width: 260px;
+        font-size: 20px;
+    }
+
+    .impemail {
+        width: 280px;
+    }
+
+    .inpbut {
+        width: 280px;
+    }
+
+    .footerframe {
+        width: 280px;
+    }
+}
